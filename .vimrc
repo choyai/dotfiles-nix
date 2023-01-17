@@ -6,7 +6,6 @@ set softtabstop=4
 set shiftwidth=4
 set smarttab
 set clipboard=unnamedplus
-set nowrap
 set undodir=~/.conifg/vim/.undo
 set directory=~/.config/vim/.swp
 set splitbelow
