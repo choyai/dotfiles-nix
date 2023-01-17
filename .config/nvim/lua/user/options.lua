@@ -20,3 +20,4 @@ vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.backup = false
 vim.opt.expandtab = true
+vim.opt.termguicolors = true

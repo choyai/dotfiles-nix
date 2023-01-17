@@ -19,6 +19,8 @@ map("n", "<S-j>", ":resize -2<CR>", opts)
 map("n", "<S-k>", ":resize +2<CR>", opts)
 map("n", "<S-l>", ":vertical resize +2<CR>", opts)
 
+--Directory View
+map("n", "<leader>d", ":NvimTreeToggle<CR>", opts)
 
 ---------- Insert Mode ----------
 
