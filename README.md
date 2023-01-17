@@ -1,4 +1,4 @@
-# Configs-Rice
+# dotfiles
 My configs and dot files
 
 ## Setup
