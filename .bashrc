@@ -28,7 +28,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export PS1="\[\e[1m\]\[\033[38;5;183m\]\h\[$(tput sgr0)\]\[\e[1m\]\[\033[38;5;81m\][\[$(tput sgr0)\]\[\e[1m\]\[\033[38;5;157m\]\w\[$(tput sgr0)\]\[\e[1m\]\[\033[38;5;81m\]]\[$(tput sgr0)\]\$(parse_git_branch) \[$(tput sgr0)\]\[\033[38;5;183m\]>\[$(tput sgr0)\] \[$(tput sgr0)\]"
+export PS1="\[\e[1m\]\[\033[38;5;183m\]\h\[$(tput sgr0)\]\[\e[1m\]\[\033[38;5;81m\][\[$(tput sgr0)\]\[\e[1m\]\[\033[38;5;157m\]\w\[$(tput sgr0)\]\[\e[1m\]\[\033[38;5;81m\]]\[$(tput sgr0)\]\[\e[1m\]\[\033[38;5;81m\]\$(parse_git_branch) \[$(tput sgr0)\]\[\e[1m\]\[\033[38;5;183m\]>\[$(tput sgr0)\] \[$(tput sgr0)\]"
 
 unset rc
 
