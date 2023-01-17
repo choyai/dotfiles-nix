@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cp .bashrc ~
+cp .bash_profile ~
+cp .zshrc ~
+cp .vimrc ~
+
