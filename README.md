@@ -31,6 +31,8 @@ install `light` for backlight controls
 
 move `autotiling` to $PATH for master stacking tiling
 
+install `lxpolkit` to fix bugged apps like `virt-manager` and `balena-etcher`
+
 ## Theme
 
 add line `export QT_QPA_PLATFORMTHEME=qt5ct` to `/etc/environment` to get QT Themes to work
