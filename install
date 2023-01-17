@@ -17,5 +17,6 @@ cp -r .config/* ~/.config/
 
 unzip -qo ~/.themes/dracula.zip -d ~/.themes/
 unzip -qo ~/.icons/dracula.zip -d ~/.icons/
+unzip -qo ~/.fonts/hack.zip -d ~/.fonts/
 
 sudo tee -a /etc/environment <<< "export QT_QPA_PLATFORMTHEME=qt5ct"
