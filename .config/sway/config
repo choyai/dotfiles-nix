@@ -263,3 +263,6 @@ exec swayidle -w \
 
 #Wofi
 set $menu wofi --show run
+
+#Polkit Fix
+exec lxpolkit
