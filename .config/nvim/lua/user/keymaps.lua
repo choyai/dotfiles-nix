@@ -22,6 +22,9 @@ map("n", "<S-l>", ":vertical resize +2<CR>", opts)
 --Directory View
 map("n", "<leader>d", ":NvimTreeToggle<CR>", opts)
 
+--Tabs
+map("n", "<leader>h", ":tabprevious", opts)
+map("n", "<leader>l", ":tabnext", opts)
 ---------- Insert Mode ----------
 
 --Navigation
@@ -34,3 +37,4 @@ map("v", "<S-h>", "< gv", opts)
 map("v", "<S-j>", ":m '>+1<CR>gv=gv", opts)
 map("v", "<S-k>", ":m '<-2<CR>gv=gv", opts)
 map("v", "<S-l>", "> gv", opts)
+

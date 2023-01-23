@@ -1,12 +1,13 @@
 -- Base Vim Options :help options for full list
-
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamed"
+vim.opt.guicursor = ""
 vim.opt.mouse = "a"
 vim.opt.smartcase = true
 vim.opt.smartindent = true
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.cursorline = false
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
@@ -21,3 +22,19 @@ vim.opt.undofile = true
 vim.opt.backup = false
 vim.opt.expandtab = true
 vim.opt.termguicolors = true
+vim.opt.scrolloff = 8
+vim.opt.updatetime = 50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
