@@ -10,6 +10,7 @@ plugin.setup({
     open_on_setup_file = false,
     view = {
         adaptive_size = true,
+        preserve_window_proportions = true,
         width = {
             min = 10,
             max = 20,
