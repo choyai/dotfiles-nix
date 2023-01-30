@@ -225,10 +225,10 @@ bar {
 exec_always --no-startup-id autotiling
 
 #Theme
-set $gnome-schema org.gnome.desktop.interface
-exec_always {
-    gsettings set $gnome-schema gtk-theme 'Adwaita-dark'
-}
+# set $gnome-schema org.gnome.desktop.interface
+# exec_always {
+#     gsettings set $gnome-schema gtk-theme 'Adwaita-dark'
+# }
 
 #Screenshot
 bindsym $mod+p exec 'mkdir -p ~/Pictures/screenshots; grim -t png -g "$(slurp)" ~/Pictures/screenshots/$(date +%Y-%m-%d_%H-%m-%s).png'
