@@ -12,7 +12,7 @@ plugin.setup({
         adaptive_size = true,
         preserve_window_proportions = true,
         width = {
-            min = 10,
+            min = 20,
             max = 20,
         },
        mappings = {
