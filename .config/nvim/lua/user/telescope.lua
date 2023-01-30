@@ -1,4 +1,8 @@
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>f', builtin.find_files, {})
-vim.keymap.set('n', '<leader>gf', builtin.git_files, {})
-
+-- local status, plugin = pcall(require,'telescope.builtin')
+-- if not status then
+--     print('Error with plugin: ', plugin)
+-- else
+--
+-- vim.keymap.set('n', '<leader>f', plugin.find_files, {})
+-- vim.keymap.set('n', '<leader>gf', plugin.git_files, {})
+-- end

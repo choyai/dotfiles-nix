@@ -1,4 +1,9 @@
-local lsp = require('lsp-zero')
+local status, plugin = pcall(require,'lsp-zero')
+if not status then
+    print('Error with plugin: ', plugin)
+else
 
-lsp.preset('recommended')
-lsp.setup()
+plugin.preset('recommended')
+plugin.setup()
+
+end
