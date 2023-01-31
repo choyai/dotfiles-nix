@@ -41,8 +41,4 @@ map("v", "<S-l>", "> gv", opts)
 ---------- Nvim Tree ----------
 map("n", "<leader>d", ":NvimTreeToggle<CR>", opts)
 
----------- Telescope ----------
-map('n', '<leader>f', tele.find_files, {})
-map('n', '<leader>gf', tele.git_files, {})
-map('n', '<leader>b', tele.buffers, {})
 
