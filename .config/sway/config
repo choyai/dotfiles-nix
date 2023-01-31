@@ -257,8 +257,9 @@ input * {
 }
 
 #Laptop Lid
-bindswitch --reload --locked lid:on exec swaylock
-bindswitch --reload --locked lid:off exec swaylock
+bindswitch --reload --locked lid:on exec swaylock -i ~/.config/sway/swaylock.png -c 000000
+bindswitch --reload --locked lid:off exec swaylock -i ~/.config/sway/swaylock.png -c 000000
+
 
 #Sway Lock
 bindsym $mod+End exec swaylock -i ~/.config/sway/swaylock.png -c 000000
