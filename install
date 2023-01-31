@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sudo cp -r scripts/* /usr/local/bin/
-sudo cp -r etc /
-sudo cp -r usr /
+sudo cp sddm.conf /etc/sddm.conf.d/
+sudo cp -r sugar-dark /usr/share/sddm/themes/
 
 cp .bashrc ~
 cp .bash_profile ~
