@@ -41,4 +41,6 @@ map("v", "<S-l>", "> gv", opts)
 ---------- Nvim Tree ----------
 map("n", "<leader>d", ":NvimTreeToggle<CR>", opts)
 
-
+---------- Telescope ----------
+vim.keymap.set('n', '<leader>f', tele.find_files, {})
+vim.keymap.set('n', '<leader>gf', tele.git_files, {})
