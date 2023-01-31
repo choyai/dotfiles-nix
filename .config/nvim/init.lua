@@ -5,7 +5,7 @@ vim.g.loaded_netrwPlugin = 1
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
---require "user.telescope"
+require "user.telescope"
 require "user.colors"
 require "user.nvimtree"
 require "user.treesitter"

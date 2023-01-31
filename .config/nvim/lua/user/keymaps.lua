@@ -1,7 +1,6 @@
 local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 local map = vim.keymap.set
---[[ local nvtree = require('nvim-tree.config').nvim_tree_callback ]]
 local tele = require('telescope.builtin')
 
 
@@ -41,9 +40,7 @@ map("v", "<S-l>", "> gv", opts)
 
 ---------- Nvim Tree ----------
 map("n", "<leader>d", ":NvimTreeToggle<CR>", opts)
--- vim.g.nvim_tree_bindings = {
---     {key = "<Tab>", cb = nvtree("cd")},
--- }
+
 ---------- Telescope ----------
 map('n', '<leader>f', tele.find_files, {})
 map('n', '<leader>gf', tele.git_files, {})
