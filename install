@@ -17,8 +17,7 @@ cp -r .themes ~
 cp -r .icons ~
 cp -r .fonts ~
 cp -r .ssh ~
-
-cp -r .config/* ~/.config/
+cp -r .config ~
 
 unzip -qo ~/.themes/dracula.zip -d ~/.themes/
 unzip -qo ~/.icons/dracula.zip -d ~/.icons/
