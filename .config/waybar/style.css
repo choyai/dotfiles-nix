@@ -92,7 +92,7 @@ button:hover {
 #window,
 #workspaces {
     margin-top: 7px;
-    background: #383c4a;
+    background: rgba(26,26,26,.9);
     padding: 0 10px;
     border-radius: 10px;
 }
