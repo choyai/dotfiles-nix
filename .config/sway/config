@@ -261,13 +261,13 @@ bindswitch --reload --locked lid:on exec swaylock
 bindswitch --reload --locked lid:off exec swaylock
 
 #Sway Lock
-bindsym $mod+End exec swaylock -c 000000
+bindsym $mod+End exec swaylock -i ~/.config/sway/swaylock.png -c 000000
 
 #Sway Idle-- HandleLidSwitch in /etc/systemd/logind.conf must be set to suspend
 exec swayidle -w \
-         timeout 1800 'swaylock -f -c 000000' \
+         timeout 1800 'swaylock -f -i ~/.config/sway/swaylock.png -c 000000' \
          timeout 1805 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep 'swaylock -f -i ~/.config/sway/swaylock.png -c 000000'
 
 #Wofi
 set $menu wofi --show run

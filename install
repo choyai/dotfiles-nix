@@ -1,8 +1,11 @@
 #!/bin/bash
 
 sudo cp -r scripts/* /usr/local/bin/
-sudo cp sddm.conf /etc/sddm.conf.d/
-sudo cp -r sugar-dark /usr/share/sddm/themes/
+
+sudo cp sddm/sddm.conf /etc/sddm.conf.d/
+sudo tar -xzvf sddm/sugar-dark.tar -C /usr/share/sddm/themes/
+sudo cp sddm/theme.conf /usr/share/sddm/themes/sugar-dark/
+sudo cp sddm/Background.jpg /usr/share/sddm/themes/sugar-dark/
 
 cp .bashrc ~
 cp .bash_profile ~
