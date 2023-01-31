@@ -1,48 +1,36 @@
 # dotfiles
 My configs and dot files
 
-## Setup
-
-install `sway`
-
-install `swaylock`
-
-install `swayidle`
-
-Might have do download `sddm` if sway is blackscreen when you login
-
-then enable with `sudo systemctl enable sddm -f`
-
 ## Applications
+Using the following applications:
+```
+sway - Window Manager
 
-install `waybar`
+swayidle - Timeout for WM
 
-install `wofi` for sexy launcher
+swaylock - Lock for WM
 
-install `pavucontrol` for audio device control
+SDDM - Login Manager
 
-install `grim` and `slup` for screenshots
+waybar - Bar for WM
 
-install `gvfs` and `gvfs-smb` for smb
+wofi - dmenu/rofi alternative
 
-install `azote` for Wallpapers
+pavucontrol - volume controll
 
-install `light` for backlight controls
+grim - screenshots
 
-move `autotiling` to $PATH for master stacking tiling
+slurp - screenshot cropping
 
-install `lxpolkit` to fix bugged apps like `virt-manager` and `balena-etcher`
+gvfs && gvfs-smb - SMB/Samba suppoort
 
-## Theme
+azote - Sets wallpapers
 
-install `lxappearance` for GTK themes
+light - Monitor backlight controls
 
-install `qt5ct` for QT Themes
+lxpolkit - Fix for root gui applications on wayland
 
-restart after installing `qt5ct` and `lxappearance`
+lxappearance - GTK Theme setting
 
-
-
-
-
-
+qt5ct - QT Theme setting
+```
