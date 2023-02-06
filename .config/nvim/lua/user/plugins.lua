@@ -54,13 +54,12 @@ return packer.startup(function(use)
     use {
         'nvim-tree/nvim-tree.lua', 
         requires = {'nvim-tree/nvim-web-devicons'}, --Needs Hack NerdFont
-        --      config = function() require("nvim-tree").setup() end
     }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use {'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    use {'nvim-telescope/telescope.nvim', branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} } --Needs g++ compiler and gcc compiler
     }
     use {
