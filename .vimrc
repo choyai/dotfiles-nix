@@ -49,11 +49,6 @@ let localleader=" "
 "Navigation and Escape
 :inoremap jj <ESC>
 
-"Tab Navigation
-:nnoremap <leader>h :tabprevious<CR>
-:nnoremap <leader>l :tabnext<CR>
-:nnoremap <leader>t :tabnew<CR>
-
 """"" Visual Mode
 
 "Move Selections

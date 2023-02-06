@@ -18,7 +18,7 @@ plugin.setup{
     pickers = {
         find_files = {
             hidden=true,
-            file_ignore_patterns = { ".git/" },
+            file_ignore_patterns = { ".git/", ".undo/",".backup/"},
         },
         -- Default configuration for builtin pickers goes here:
         -- picker_name = {
