@@ -49,6 +49,8 @@ return packer.startup(function(use)
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use "ap/vim-css-color" --Treesitter CSS will break this
     use "lukas-reineke/indent-blankline.nvim"
+    use "windwp/nvim-ts-autotag"
+    use {"akinsho/bufferline.nvim", requires = 'nvim-tree/nvim-web-devicons'}
     use {
         'nvim-tree/nvim-tree.lua', 
         requires = {'nvim-tree/nvim-web-devicons'}, --Needs Hack NerdFont

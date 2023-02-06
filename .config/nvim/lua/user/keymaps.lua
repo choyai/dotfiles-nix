@@ -37,7 +37,6 @@ map("v", "<S-j>", ":m '>+1<CR>gv=gv", opts)
 map("v", "<S-k>", ":m '<-2<CR>gv=gv", opts)
 map("v", "<S-l>", "> gv", opts)
 
-
 ---------- Nvim Tree ----------
 map("n", "<leader>d", ":NvimTreeToggle<CR>", opts)
 

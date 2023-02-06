@@ -7,8 +7,8 @@ set nowrap
 set softtabstop=4
 set shiftwidth=4
 set smarttab
-set clipboard=unname
-set undodir=~/.conifg/vim/.undo
+set clipboard^=unnamed,unnamedplus
+set undodir=~/.config/vim/.undo
 set directory=~/.config/vim/.swp
 set splitbelow
 set splitright
@@ -25,13 +25,16 @@ set updatetime=50
 set expandtab
 set guicursor=""
 set ignorecase
+set cursorline
+
+:hi CursorLineNr ctermbg=black term=none cterm=none guibg=Grey20
+:hi CursorLine ctermbg=black term=none cterm=none guibg=Grey20
+:hi Visual guibg=Grey20
 
 "Leader Key <Space>
 :noremap <Space> <Nop>
 let mapleader=" "
 let localleader=" "
-
-
 
 """"" Normal Mode 
 
@@ -40,8 +43,6 @@ let localleader=" "
 :nnoremap <S-j> :resize -2<CR>
 :nnoremap <S-k> :resize +2<CR>
 :nnoremap <S-l> :vertical resize +2<CR>
-
-
 
 """"" Insert Mode
 
@@ -63,7 +64,7 @@ let localleader=" "
 
 """"" File Explorer
 "Open Lex file explorer
-:nnoremap <leader>f :Lex 20<CR>
+:nnoremap <leader>d :Lex 20<CR>
 
 
 
