@@ -1,7 +1,7 @@
 -- Base Vim Options :help options for full list
-vim.opt.clipboard = "unnamed"
+vim.opt.clipboard = "unnamedplus"
 vim.opt.guicursor = ""
-vim.opt.mouse = "a"
+vim.opt.mouse = "r"
 vim.opt.smartcase = true
 vim.opt.smartindent = true
 vim.opt.number = true

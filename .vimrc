@@ -1,6 +1,6 @@
 set relativenumber
 set number
-set mouse=a
+set mouse=r
 set autoindent
 set tabstop=4
 set nowrap
@@ -60,7 +60,4 @@ let localleader=" "
 """"" File Explorer
 "Open Lex file explorer
 :nnoremap <leader>d :Lex 20<CR>
-
-
-
 
