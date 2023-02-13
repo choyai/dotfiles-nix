@@ -12,10 +12,6 @@ swaylock - Lock for WM
 
 swaybg - Sets backgrounds
 
-sddm - Login Manager
-
-may need qt5-graphicaleffects and qt5-quickcontrols for sddm theme
-
 waybar - Bar for WM
 
 waybar-hyprland-git - For hyprland specifically
