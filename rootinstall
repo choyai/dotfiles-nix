@@ -5,13 +5,6 @@ sudo cp .bash_profile /root
 sudo cp .zshrc /root
 sudo cp .vimrc /root
 
-sudo cp -r .themes /root
-sudo cp -r .icons /root
-sudo cp -r .fonts /root
 sudo cp -r .ssh /root
-sudo cp -r .config /root
 
-# sudo unzip -qo /root/.themes/dracula.zip -d /root/.themes/
-# sudo unzip -qo /root/.icons/dracula.zip -d /root/.icons/
-sudo unzip -qo /root/.fonts/hack.zip -d /root/.fonts/
 
