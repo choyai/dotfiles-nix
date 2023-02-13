@@ -42,7 +42,7 @@ pipewire - Needed for wayland screenshare
 
 xdg-desktop-portal-wlr - Needed for wayland screenshare
 
-may need qt5-wayland as well for screenshare
+may need qt5-wayland and qt6-wayland as well for OBS
 
 wl-clipboard - For wayland clipboard
 ```
