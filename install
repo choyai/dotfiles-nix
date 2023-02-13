@@ -2,6 +2,7 @@
 
 sudo cp -r scripts/* /usr/local/bin/
 
+sudo mkdir /etc/sddm.conf.d/
 sudo cp sddm/sddm.conf /etc/sddm.conf.d/
 sudo tar -xzvf sddm/sugar-dark.tar -C /usr/share/sddm/themes/
 sudo cp sddm/theme.conf /usr/share/sddm/themes/sugar-dark/
@@ -24,3 +25,5 @@ unzip -qo ~/.icons/dracula.zip -d ~/.icons/
 unzip -qo ~/.fonts/hack.zip -d ~/.fonts/
 
 sudo tee -a /etc/environment <<< "export QT_QPA_PLATFORMTHEME=qt5ct"
+sudo tee -a /etc/environment <<< "export QT_QPA_PLATFORM=wayland"
+sudo tee -a /etc/environment <<< "export GTK_THEME=gtk-master"
