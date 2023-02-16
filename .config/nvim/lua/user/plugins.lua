@@ -51,6 +51,7 @@ return packer.startup(function(use)
     use "lukas-reineke/indent-blankline.nvim"
     use "windwp/nvim-ts-autotag"
     use {"akinsho/bufferline.nvim", requires = 'nvim-tree/nvim-web-devicons'}
+    use {"mfussenegger/nvim-dap"}
     use {
         'nvim-tree/nvim-tree.lua', 
         requires = {'nvim-tree/nvim-web-devicons'}, --Needs Hack NerdFont
