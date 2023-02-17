@@ -54,6 +54,14 @@ return packer.startup(function(use)
     use "lewis6991/gitsigns.nvim" -- Git integration into buffer
     use "tpope/vim-fugitive"
 
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            require("which-key").setup()
+        end
+    }
     use {"akinsho/bufferline.nvim", requires = 'nvim-tree/nvim-web-devicons'} --Tabline
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} } --Debugging UI
     use {
