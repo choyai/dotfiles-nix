@@ -4,11 +4,6 @@ if not status then
     print('Plugin Error: ', plugin)
 else
 
-local function openTree()
-  -- open the tree
-  require("nvim-tree.api").tree.open()
-end
-
 plugin.setup({
     sort_by = "case_sensitive",
     view = {

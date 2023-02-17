@@ -46,12 +46,16 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
     use "rafi/awesome-vim-colorschemes" --Some dope ass color schemes
     use "nvim-tree/nvim-web-devicons" --Some dope ass icons
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    use "ap/vim-css-color" --Treesitter CSS will break this
-    use "lukas-reineke/indent-blankline.nvim"
-    use "windwp/nvim-ts-autotag"
-    use {"akinsho/bufferline.nvim", requires = 'nvim-tree/nvim-web-devicons'}
-    use {"mfussenegger/nvim-dap"}
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'} --Treesitter baby
+    use "ap/vim-css-color" --Color values visualized
+    use "lukas-reineke/indent-blankline.nvim" --sexy indent lines
+    use "windwp/nvim-ts-autotag" --Auto tags for HTML
+    use "mfussenegger/nvim-dap" --Debugging
+    use "lewis6991/gitsigns.nvim" -- Git integration into buffer
+    use "tpope/vim-fugitive"
+
+    use {"akinsho/bufferline.nvim", requires = 'nvim-tree/nvim-web-devicons'} --Tabline
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} } --Debugging UI
     use {
         'nvim-tree/nvim-tree.lua', 
         requires = {'nvim-tree/nvim-web-devicons'}, --Needs Hack NerdFont
