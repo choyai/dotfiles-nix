@@ -35,7 +35,7 @@ plugin.setup({
         preserve_window_proportions = true,
         width = {
             min = 20,
-            max = 50,
+            max = 30,
         },
        mappings = {
            list = {
