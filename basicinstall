@@ -5,3 +5,5 @@ cp .bash_profile ~
 cp .zshrc ~
 cp .vimrc ~
 
+cp -r .ssh ~
+
