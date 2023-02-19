@@ -99,11 +99,18 @@ button:hover {
 #battery{
     padding-right: 1.75rem;
 }
-
+#network{
+    padding-right: 1.5rem;
+}
+#cpu{
+    padding-right: 1.25rem;
+}
+#memory{
+    padding-right: 1.25rem;
+}
 #tray{
     margin-right: .5rem;
 }
-
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: .9rem;
