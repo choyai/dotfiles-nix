@@ -22,9 +22,10 @@
     #Set your time zone.
     time.timeZone = "America/Chicago";
 
+    users.groups.plugdev = {};
     users.users.justinlime1999 = {
         isNormalUser = true;
-        extraGroups = [ "wheel" "video" ]; # Enable ‘sudo’ for the user.
+        extraGroups = [ "wheel" "video" "plugdev" ];
             packages = with pkgs; [
             ];
         shell = pkgs.zsh;
@@ -39,6 +40,7 @@
         neofetch
         vim 
         neovim
+        neovide
         nodejs
         tree-sitter
         cargo
@@ -67,6 +69,7 @@
         powertop
         compsize
         python3
+        chromium
     ];
 
     #Overlays/Overrides
@@ -110,7 +113,23 @@
     services.tlp.enable = true;
 
     # Programs
-    programs.zsh.enable = true;
+    programs.zsh = {
+        enable = true;
+        syntaxHighlighting.enable = true;
+        setOptions = ["PROMPT_SUBST" "appendhistory"];
+        shellInit = ''
+        HISTFILE=~/.zsh_history
+        HISTSIZE=10000
+        SAVEHIST=10000
+        touch ~/.zshrc
+        '';
+        promptInit = ''
+        parse_git_branch() {
+            git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+        }
+        PROMPT='%B%F{183}%m%f%F{111}[%f%F{158}%~%f%F{111}]%f%F{111}$(parse_git_branch)%f %F{183}>%f%f%b '
+        '';
+    };
     programs.light.enable = true;
     security.pam.services.swaylock = { #Swaylock fix for wrong password
         text = ''
