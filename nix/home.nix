@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
+let 
+    font = "JetBrainsMono Nerd Font";
+in
 {
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
@@ -8,15 +11,15 @@
     home.username = "justinlime1999";
     home.homeDirectory = "/home/justinlime1999";
 
+    #environment.pathsToLink = [ "/share/zsh" ];
+
     home.packages = with pkgs; [
         neofetch
     ];
     gtk = {
         enable = true;
-        font.name = "JetBrainsMono NF 12";
+        font.name = "${font} 12";
         iconTheme = {
-            # name = "rose-pine";
-            # package = pkgs.rose-pine-gtk-theme;
             name = "Papirus-Dark";
             package = pkgs.papirus-icon-theme;
         };
@@ -49,7 +52,7 @@
             server.enable = true;
             settings = {
                 main = {
-                    font = "JetBrainsMono NF:size=12";
+                    font = "${font}:size=12";
                     pad = "25x15 center";
                     dpi-aware = "no";
                 };
@@ -86,7 +89,7 @@
             style = ''
                 * {
                     /* `otf-font-awesome` is required to be installed for icons */
-                    font-family: JetBrainsMono NF, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+                    font-family: ${font}, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
                     font-size: 16px;
                     /* color: #bd93f9; */
                     color: #bd93f9;
@@ -212,16 +215,6 @@
                     margin-right: .9rem;
                 }
 
-                #clock {
-                }
-
-                #battery {
-                    
-                }
-
-                #battery.charging, #battery.plugged {
-                }
-
                 @keyframes blink {
                     to {
                         background-color: #ffffff;
@@ -237,56 +230,8 @@
                     animation-direction: alternate;
                 }
 
-                label:focus {
-                }
-
-                #cpu {
-                }
-
-                #memory {
-                }
-
-                #disk {
-                }
-
-                #backlight {
-                }
-
-                #network {
-                }
-
-                #network.disconnected {
-                }
-
-                #pulseaudio {
-                }
-
-                #pulseaudio.muted {
-                }
-
-                #wireplumber {
-                }
-
-                #wireplumber.muted {
-                }
-
                 #custom-media {
                     min-width: 100px;
-                }
-
-                #custom-media.custom-spotify {
-                }
-
-                #custom-media.custom-vlc {
-                }
-
-                #temperature {
-                }
-
-                #temperature.critical {
-                }
-
-                #tray {
                 }
 
                 #tray > .passive {
@@ -295,24 +240,6 @@
 
                 #tray > .needs-attention {
                     -gtk-icon-effect: highlight;
-                }
-
-                #idle_inhibitor {
-                }
-
-                #idle_inhibitor.activated {
-                }
-
-                #mpd {
-                }
-
-                #mpd.disconnected {
-                }
-
-                #mpd.stopped {
-                }
-
-                #mpd.paused {
                 }
 
                 #language {
@@ -331,22 +258,32 @@
                     padding: 0 5px;
                 }
 
-                #keyboard-state > label.locked {
-                }
-
-                #scratchpad {
-                }
-
                 #scratchpad.empty {
                     background-color: transparent;
                 }
                 '';
         };
+        zsh = {
+            enable = true;
+            enableAutosuggestions = true;
+            enableCompletion = true;
+            enableSyntaxHighlighting = true;
+            history.path = "~/.zsh_history";
+            initExtra = ''
+            setopt appendhistory
+            parse_git_branch() {
+              git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+            }
+            setopt PROMPT_SUBST
+            PROMPT='%B%F{183}%m%f%F{111}[%f%F{158}%~%f%F{111}]%f%F{111}$(parse_git_branch)%f %F{183}>%f%f%b '
+            '';
+            #defaultKeymap = "vicmd";
+        };
     };
     home.file = {
         ".config/wofi/style.css".text = ''
         *{
-        font-family: JetBrainsMono NF,monospace;
+        font-family: ${font},monospace;
         }
 
         window {
@@ -415,19 +352,19 @@
         # bright7=cad8d9   # bright white
         # '';
         
-        ".zshrc".text = '' 
-        # Lines configured by zsh-newuser-install
-        HISTFILE=~/.zsh_history
-        HISTSIZE=10000
-        SAVEHIST=10000
-        setopt appendhistory
-        parse_git_branch() {
-            git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-        }
-        setopt PROMPT_SUBST
-        PROMPT='%B%F{183}%m%f%F{111}[%f%F{158}%~%f%F{111}]%f%F{111}$(parse_git_branch)%f %F{183}>%f%f%b '
-        # End of lines configured by zsh-newuser-install
-        '';
+        # ".zshrc".text = '' 
+        # # Lines configured by zsh-newuser-install
+        # HISTFILE=~/.zsh_history
+        # HISTSIZE=10000
+        # SAVEHIST=10000
+        # setopt appendhistory
+        # parse_git_branch() {
+        #     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+        # }
+        # setopt PROMPT_SUBST
+        # PROMPT='%B%F{183}%m%f%F{111}[%f%F{158}%~%f%F{111}]%f%F{111}$(parse_git_branch)%f %F{183}>%f%f%b '
+        # # End of lines configured by zsh-newuser-install
+        # '';
     };
 
     # This value determines the Home Manager release that your

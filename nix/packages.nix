@@ -53,5 +53,6 @@
     ];
 
     #Programs
+    environment.pathsToLink = [ "/share/zsh" ];
 }
 

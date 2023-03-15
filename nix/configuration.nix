@@ -9,6 +9,7 @@
         ./hardware-configuration.nix
         ./packages.nix
         ./services.nix
+        ./laptop.nix
         ];
 
     # Use the systemd-boot EFI boot loader.
@@ -23,6 +24,7 @@
     };
     
     nix.settings.experimental-features= [ "nix-command" "flakes" ];
+    nixpkgs.config.allowUnfree = true;
 
     #Set your time zone.
     time.timeZone = "America/Chicago";

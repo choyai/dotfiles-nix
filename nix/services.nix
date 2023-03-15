@@ -35,6 +35,6 @@
             auth include login
             '';
     };
-
+    services.tlp.enable = true;
 }
 
