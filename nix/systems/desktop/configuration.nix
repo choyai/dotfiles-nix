@@ -9,7 +9,6 @@
         ./hardware-configuration.nix
         ./packages.nix
         ./services.nix
-        ./laptop.nix
         ];
 
     # Use the systemd-boot EFI boot loader.

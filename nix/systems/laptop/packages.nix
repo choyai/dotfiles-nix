@@ -14,10 +14,12 @@
         grim
         home-manager
         htop
+        light
         lua
         mpv
         neovim
         nodejs
+        obs-studio
         pavucontrol
         powertop
         pulseaudio #Needed for volume keys

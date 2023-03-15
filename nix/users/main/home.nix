@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 let 
     font = "JetBrainsMono Nerd Font";
+    accent = "bd93f9";
+    background = "11111B";
 in
 {
     # Let Home Manager install and manage itself.
@@ -11,10 +13,10 @@ in
     home.username = "justinlime1999";
     home.homeDirectory = "/home/justinlime1999";
 
-    #environment.pathsToLink = [ "/share/zsh" ];
-
     home.packages = with pkgs; [
         neofetch
+        libsForQt5.dolphin
+        libsForQt5.qtstyleplugins
     ];
     gtk = {
         enable = true;
@@ -45,6 +47,9 @@ in
     qt = {
         enable = true;
         platformTheme = "gtk";
+        style.name = "gtk2";
+        #style.name = "gtk2";
+        #style.package = "libsForQt5.qtstyleplugins";
     };
     programs = {
         foot = {
@@ -58,7 +63,7 @@ in
                 };
                 colors = {
                     alpha=".95";
-                    background="11111B";
+                    background="${background}";
                     regular0="11111B";  # black
                     regular1="ff5555";  # red
                     regular2="afffd7";  # green
@@ -88,11 +93,9 @@ in
             };
             style = ''
                 * {
-                    /* `otf-font-awesome` is required to be installed for icons */
                     font-family: ${font}, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
                     font-size: 16px;
-                    /* color: #bd93f9; */
-                    color: #bd93f9;
+                    color: #${accent};
                 }
 
                 window#waybar {
@@ -106,24 +109,6 @@ in
                     opacity: 0.2;
                 }
 
-                /*
-                window#waybar.empty {
-                    background-color: transparent;
-                }
-                window#waybar.solo {
-                    background-color: #FFFFFF;
-                }
-                */
-
-                window#waybar.termite {
-                    background-color: #3F3F3F;
-                }
-
-                window#waybar.chromium {
-                    background-color: #000000;
-                    border: none;
-                }
-
                 button {
                     /* Use box-shadow instead of border so the text isn't offset */
                     box-shadow: inset 0 -3px transparent;
@@ -132,7 +117,6 @@ in
                     border-radius: 0;
                 }
 
-                /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
                 button:hover {
                     background: inherit;
                     box-shadow: inset 0 -3px #ffffff;
@@ -141,7 +125,7 @@ in
                 #workspaces button {
                     padding: 5px;
                     background-color: transparent;
-                    color: #bd93f9; 
+                    color: #${accent}; 
                 }
 
                 #workspaces button:hover {
@@ -149,9 +133,9 @@ in
                 }
 
                 #workspaces button.active{
-                    color: #bd93f9;
+                    color: #${accent};
                     border-radius: 10px;
-                    box-shadow: inset 0 -3px #bd93f9;
+                    box-shadow: inset 0 -3px #${accent};
                 }
 
                 #workspaces button.urgent {
@@ -182,7 +166,7 @@ in
                 #window,
                 #workspaces {
                     margin-top: .70rem;
-                    background: #11111D; /* rgba(26,26,26,.9); */
+                    background: #${background};
                     padding: 0 1rem;
                     border-radius: .75rem;
                 }
@@ -192,10 +176,8 @@ in
                 #network{
                     padding-right: 1.5rem;
                 }
+                #memory,
                 #cpu{
-                    padding-right: 1.25rem;
-                }
-                #memory{
                     padding-right: 1.25rem;
                 }
                 #tray{
@@ -215,60 +197,15 @@ in
                     margin-right: .9rem;
                 }
 
-                @keyframes blink {
-                    to {
-                        background-color: #ffffff;
-                        color: #000000;
-                    }
-                }
-
-                #battery.critical:not(.charging) {
-                    animation-name: blink;
-                    animation-duration: .5s;
-                    animation-timing-function: linear;
-                    animation-iteration-count: infinite;
-                    animation-direction: alternate;
-                }
-
-                #custom-media {
-                    min-width: 100px;
-                }
-
-                #tray > .passive {
-                    -gtk-icon-effect: dim;
-                }
-
-                #tray > .needs-attention {
-                    -gtk-icon-effect: highlight;
-                }
-
-                #language {
-                    padding: 0 5px;
-                    margin: 0 5px;
-                    min-width: 16px;
-                }
-
-                #keyboard-state {
-                    padding: 0 0px;
-                    margin: 0 5px;
-                    min-width: 16px;
-                }
-
-                #keyboard-state > label {
-                    padding: 0 5px;
-                }
-
-                #scratchpad.empty {
-                    background-color: transparent;
-                }
                 '';
         };
         zsh = {
             enable = true;
+            autocd = true;
             enableAutosuggestions = true;
             enableCompletion = true;
             enableSyntaxHighlighting = true;
-            history.path = "~/.zsh_history";
+            history.path = "$HOME/.zsh_history";
             initExtra = ''
             setopt appendhistory
             parse_git_branch() {
@@ -288,8 +225,8 @@ in
 
         window {
         margin: 0px;
-        border: 2px solid #bd93f9;
-        background-color: #11111D;
+        border: 2px solid #${accent};
+        background-color: #${background};
         border-radius: 20px;
         }
 
@@ -297,8 +234,8 @@ in
         margin: 5px;
         border: none;
         color: #F5F5F5;
-        background-color: #11111D;
-        border: 2px solid #bd93f9;
+        background-color: #${background};
+        border: 2px solid #${accent};
         border-radius: 10px;
         margin: 10px;
         }
@@ -306,14 +243,14 @@ in
         #inner-box {
         margin: 5px;
         border: none;
-        background-color: #11111D;
+        background-color: #${background};
         border-radius: 20px;
         }
 
         #outer-box {
         margin: 5px;
         border: none;
-        background-color: #11111D;
+        background-color: #${background};
         border-radius: 20px;
         }
 
@@ -325,46 +262,16 @@ in
         #text {
         margin: 5px;
         border: none;
-        color: #bd93f9;
+        color: #${accent};
         } 
         #text:selected{
         color:#F5F5F5;
         }
 
         #entry:selected {
-        background-color: #bd93f9;
+        background-color: #${accent};
         }
         '';
-        # regular1=ff5555  # red
-        # regular2=afffd7  # green
-        # regular3=f1fa8c  # yellow
-        # regular4=87afff  # blue
-        # regular5=bd93f9  # magenta
-        # regular6=8be9fd  # cyan
-        # regular7=f8f8f2  # white
-        # bright0=2d5b69   # bright black
-        # bright1=ff665c   # bright red
-        # bright2=84c747   # bright green
-        # bright3=ebc13d   # bright yellow
-        # bright4=58a3ff   # bright blue
-        # bright5=ff84cd   # bright magenta
-        # bright6=53d6c7   # bright cyan
-        # bright7=cad8d9   # bright white
-        # '';
-        
-        # ".zshrc".text = '' 
-        # # Lines configured by zsh-newuser-install
-        # HISTFILE=~/.zsh_history
-        # HISTSIZE=10000
-        # SAVEHIST=10000
-        # setopt appendhistory
-        # parse_git_branch() {
-        #     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-        # }
-        # setopt PROMPT_SUBST
-        # PROMPT='%B%F{183}%m%f%F{111}[%f%F{158}%~%f%F{111}]%f%F{111}$(parse_git_branch)%f %F{183}>%f%f%b '
-        # # End of lines configured by zsh-newuser-install
-        # '';
     };
 
     # This value determines the Home Manager release that your

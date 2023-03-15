@@ -1,6 +1,7 @@
 { lib, pkgs, ... }:
 {
     # List services that you want to enable:
+    services.tlp.enable = true;
     services.gvfs = {
         enable = true;
         package = lib.mkForce pkgs.gnome3.gvfs;
@@ -35,6 +36,5 @@
             auth include login
             '';
     };
-    services.tlp.enable = true;
 }
 
