@@ -33,7 +33,7 @@
     users.users.justinlime1999 = {
         isNormalUser = true;
         initialPassword = "gigachad";
-        extraGroups = [ "wheel" "video" "justinlime1999" ];
+        extraGroups = [ "wheel" "video" "libvirtd" "justinlime1999" ];
             packages = with pkgs; [
             ];
         shell = pkgs.zsh;

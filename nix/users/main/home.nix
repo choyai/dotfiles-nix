@@ -3,6 +3,7 @@ let
     font = "JetBrainsMono Nerd Font";
     accent = "bd93f9";
     background = "11111B";
+    username = "justinlime1999";
 in
 {
     # Let Home Manager install and manage itself.
@@ -10,8 +11,8 @@ in
 
     # Home Manager needs a bit of information about you and the
     # paths it should manage.
-    home.username = "justinlime1999";
-    home.homeDirectory = "/home/justinlime1999";
+    home.username = "${username}";
+    home.homeDirectory = "/home/${username}";
 
     #Overlays/Overrides
     nixpkgs.overlays = [
@@ -23,10 +24,24 @@ in
     ];
 
     home.packages = with pkgs; [
-        waybar
-        neofetch
+        brave
+        firefox
+        foot
+        gimp
+        grim
         libsForQt5.dolphin
-        libsForQt5.qtstyleplugins
+        mpv
+        neofetch
+        obs-studio
+        pavucontrol
+        slurp
+        swaybg
+        swaylock
+        swayidle
+        tdesktop
+        waybar
+        wofi
+        xfce.thunar
     ];
     gtk = {
         enable = true;
@@ -58,8 +73,6 @@ in
         enable = true;
         platformTheme = "gtk";
         style.name = "gtk2";
-        #style.name = "gtk2";
-        #style.package = "libsForQt5.qtstyleplugins";
     };
     programs = {
         foot = {
@@ -281,7 +294,6 @@ in
             setopt PROMPT_SUBST
             PROMPT='%B%F{183}%m%f%F{111}[%f%F{158}%~%f%F{111}]%f%F{111}$(parse_git_branch)%f %F{183}>%f%f%b '
             '';
-            #defaultKeymap = "vicmd";
         };
     };
     home.file = {
