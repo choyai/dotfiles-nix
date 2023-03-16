@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 let 
     font = "JetBrainsMono Nerd Font";
     accent = "bd93f9";
@@ -13,7 +13,17 @@ in
     home.username = "justinlime1999";
     home.homeDirectory = "/home/justinlime1999";
 
+    #Overlays/Overrides
+    nixpkgs.overlays = [
+        (self: super: {
+         waybar = super.waybar.overrideAttrs (oldAttrs: {
+                 mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+                 });
+         })
+    ];
+
     home.packages = with pkgs; [
+        waybar
         neofetch
         libsForQt5.dolphin
         libsForQt5.qtstyleplugins
@@ -89,7 +99,64 @@ in
                 height = 35;
                 spacing = 4;
                 modules-left = ["wlr/workspaces" "sway/mode" "sway/scratchpad" "custom/media"];
-                modules-right = ["pulseaudio" "network" "cpu" "memory" "temperature" "battery" "battery#bat2" "clock" "tray"];
+                modules-right = ["pulseaudio" "network" "cpu" "memory" "temperature" "battery" "clock" "tray"];
+                clock = {
+                    timezone = "America/Chicago";
+                    tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+	                format = "{:%a, %d %b, %I:%M %p}";
+                };
+                battery = {
+                    states = {
+                        good = 95;
+                        warning = 30;
+                        critical = 15;
+                    };
+                        format = "{capacity}% {icon}";
+                        format-charging = "{capacity}% ";
+                        format-plugged = "{capacity}% ";
+                        format-alt = "{time} {icon}";
+                        format-icons = ["" "" "" "" ""];
+                };
+                network = {
+                    format-wifi = "{essid} ({signalStrength}%) ";
+                        format-ethernet = "Ethernet ";
+                        tooltip-format = "{ifname} via {gwaddr}";
+                        format-linked = "{ifname} (No IP)";
+                        format-disconnected = "Disconnected ⚠";
+                        format-alt = "{ifname}: {ipaddr}/{cidr}";
+                };
+                pulseaudio = {
+                    format = "{volume}% {icon} {format_source}";
+                        format-bluetooth = "{volume}% {icon} {format_source}";
+                        format-bluetooth-muted = "{icon} {format_source}";
+                        format-muted = "{format_source}";
+                        format-source = "{volume}% ";
+                        format-source-muted = "";
+                        format-icons = {
+                            headphone = "";
+                            hands-free = "";
+                            headset = "";
+                            phone = "";
+                            portable = "";
+                            car = "";
+                            default = ["" "" ""];
+                        };
+                        on-click = "pavucontrol";
+                };
+                tray = {
+                    spacing = 10;
+                };
+                cpu = {
+                    format = "{usage}% ";
+                        tooltip = false;
+                };
+                memory = {
+                    format = "{}% ";
+                };
+                temperature = {
+                        format = "{temperatureC}°C {icon}";
+                        format-icons = [""];
+                };
             };
             style = ''
                 * {
