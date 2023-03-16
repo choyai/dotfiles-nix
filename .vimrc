@@ -26,6 +26,7 @@ set expandtab
 set guicursor=""
 set ignorecase
 set cursorline
+syntax enable
 
 :hi CursorLineNr ctermbg=black term=none cterm=none guibg=Grey20
 :hi CursorLine ctermbg=black term=none cterm=none guibg=Grey20

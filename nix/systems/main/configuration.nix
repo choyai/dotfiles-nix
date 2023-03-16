@@ -9,7 +9,7 @@
         ./hardware-configuration.nix
         ./packages.nix
         ./services.nix
-        ./laptop.nix
+        #./laptop.nix
         ];
 
     # Use the systemd-boot EFI boot loader.
@@ -29,14 +29,18 @@
     #Set your time zone.
     time.timeZone = "America/Chicago";
 
-    users.groups.justinlime1999 = {};
-    users.users.justinlime1999 = {
-        isNormalUser = true;
-        initialPassword = "gigachad";
-        extraGroups = [ "wheel" "video" "libvirtd" "justinlime1999" ];
+    users = {
+        defaultUserShell = pkgs.zsh;
+        groups = {
+            justinlime1999 = {};
+        };
+        users.justinlime1999 = {
+            isNormalUser = true;
+            initialPassword = "gigachad";
+            extraGroups = [ "wheel" "video" "libvirtd" "justinlime1999" ];
             packages = with pkgs; [
             ];
-        shell = pkgs.zsh;
+        };
     };
 
     # This value determines the NixOS release from which the default
@@ -47,6 +51,5 @@
     # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
 
     system.stateVersion = "22.11"; # Did you read the comment?
-
 }
 
