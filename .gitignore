@@ -1,4 +1,5 @@
 plugin/
+result/
 .undo/
 .swp/
 .backup/

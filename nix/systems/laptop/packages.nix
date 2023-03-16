@@ -67,6 +67,7 @@ in
         git
         home-manager
         htop
+        light
         lua
         neovim
         nodejs
@@ -90,6 +91,7 @@ in
     ];
 
     #Programs
+    programs.light.enable = true;
     programs.dconf.enable = true;
     environment.pathsToLink = [ "/share/zsh" ];
     programs.zsh = {
