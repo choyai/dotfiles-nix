@@ -92,24 +92,24 @@ in
     #Programs
     programs.dconf.enable = true;
     environment.pathsToLink = [ "/share/zsh" ];
-    programs.zsh = {
-        enable = true;
-        syntaxHighlighting.enable = true;
-        enableCompletion = true;
-        autosuggestions.enable = true;
-        setOptions = ["PROMPT_SUBST" "appendhistory"];
-        shellInit = ''
-            HISTFILE=~/.zsh_history
-            HISTSIZE=10000
-            SAVEHIST=10000
-            touch ~/.zshrc
-            '';
-        promptInit = ''
-            parse_git_branch() {
-                git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-            }
-            PROMPT='%B%F{183}%m%f%F{111}[%f%F{158}%~%f%F{111}]%f%F{111}$(parse_git_branch)%f %F{183}>%f%f%b '
-            '';
-    };
+    # programs.zsh = {
+    #     enable = true;
+    #     syntaxHighlighting.enable = true;
+    #     enableCompletion = true;
+    #     autosuggestions.enable = true;
+    #     setOptions = ["PROMPT_SUBST" "appendhistory"];
+    #     shellInit = ''
+    #         HISTFILE=~/.zsh_history
+    #         HISTSIZE=10000
+    #         SAVEHIST=10000
+    #         touch ~/.zshrc
+    #         '';
+    #     promptInit = ''
+    #         parse_git_branch() {
+    #             git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    #         }
+    #         PROMPT='%B%F{183}%m%f%F{111}[%f%F{158}%~%f%F{111}]%f%F{111}$(parse_git_branch)%f %F{183}>%f%f%b '
+    #         '';
+    # };
 }
 

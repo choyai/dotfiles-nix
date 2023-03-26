@@ -19,7 +19,7 @@
 
     networking = {
         networkmanager.enable = true;
-        hostName="nixos";
+        hostName="nixlap";
     };
     
     nix.settings.experimental-features= [ "nix-command" "flakes" ];

@@ -156,9 +156,9 @@ in
                         };
                         on-click = "pavucontrol";
                 };
-                tray = {
-                    spacing = 10;
-                };
+                # tray = {
+                #     spacing = 10;
+                # };
                 cpu = {
                     format = "{usage}% ";
                         tooltip = false;

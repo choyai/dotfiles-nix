@@ -27,10 +27,16 @@
                 };
             };
             nixosConfigurations = {
-                nixos = lib.nixosSystem {
+                nixdesk = lib.nixosSystem {
                     inherit system;
                     modules = [
                         ./nix/systems/main/configuration.nix
+                    ];
+                };
+                nixlaptop = lib.nixosSystem {
+                    inherit system;
+                    modules = [
+                        ./nix/systems/laptop/configuration.nix
                     ];
                 };
             };
