@@ -77,7 +77,7 @@ plugin.setup({
       {
         icon = '󰗼 ',
         icon_hl = '@variable',
-        desc = 'Kill Tab',
+        desc = 'Kill Current Tab',
         desc_hl = 'String',
         key = ' ',
         keymap = 'SPC q',
