@@ -1,4 +1,3 @@
--- Base Vim Options :help options for full list
 vim.opt.clipboard = "unnamedplus"
 vim.opt.guicursor = ""
 vim.opt.mouse = "r"
@@ -11,9 +10,9 @@ vim.opt.wrap = false
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
-vim.opt.backupdir = vim.fn.expand("~/.config/nvim/.backup")
-vim.opt.undodir = vim.fn.expand("~/.config/nvim/.undo")
-vim.opt.directory = vim.fn.expand("~/.config/nvim/.swp")
+vim.opt.backupdir = vim.fn.expand("~/.config/nvim/data/backup")
+vim.opt.undodir = vim.fn.expand("~/.config/nvim/data/undo")
+vim.opt.directory = vim.fn.expand("~/.config/nvim/data/swap")
 vim.opt.ignorecase = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
@@ -25,18 +24,4 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 vim.opt.cursorline = true
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

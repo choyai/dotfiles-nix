@@ -8,7 +8,6 @@ plugin.setup {
       "c", 
       "lua", 
       "vim", 
-      "help", 
       "python", 
       "html", 
       "htmldjango",

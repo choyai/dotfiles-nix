@@ -1,19 +1,17 @@
--- disable netrw at the very start of your init.lua (strongly advised)
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+--- Core and Plugin Manager ---
+require "core.keymaps"
+require "core.lazy"
+require "core.options"
 
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.telescope"
-require "user.colors"
-require "user.nvimtree"
-require "user.treesitter"
-require "user.lsp"
-require "user.lualine"
-require "user.indent"
-require "user.autotag"
-require "user.bufferline"
-require "user.dap"
-require "user.dapui"
-require "user.gitsigns"
+--- Plugins ---
+require "plugins.autotag"
+require "plugins.bufferline"
+require "plugins.dap"
+require "plugins.dapui"
+require "plugins.gitsigns"
+require "plugins.indent"
+require "plugins.lualine"
+require "plugins.nvimtree"
+require "plugins.onedarkpro"
+require "plugins.telescope"
+require "plugins.treesitter"
