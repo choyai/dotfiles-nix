@@ -2,25 +2,7 @@ local status, plugin = pcall(require,'dashboard')
 if not status then
     print('Error with plugin: ', plugin)
 else
--- plugin.setup({
---     theme = 'hyper',
---     config = {
---         week_header = {
---             enable = true,
---         },
---         shortcut = {
---             { desc = '󰊳 Update', group = '@property', action = 'Lazy update', key = 'u' },
---             {
---                 icon = ' ',
---                 icon_hl = '@variable',
---                 desc = 'Files',
---                 group = 'Label',
---                 action = 'Telescope find_files',
---                 key = 'f',
---             },
---         },
---     },
--- })
+
 plugin.setup({
   theme = 'doom',
   config = {
@@ -52,24 +34,80 @@ plugin.setup({
     }, 
     center = {
       {
-        icon = ' ',
-        icon_hl = 'Title',
+        icon = ' ',
+        icon_hl = '@variable',
         desc = 'Find File           ',
         desc_hl = 'String',
         key = 'f',
         keymap = 'SPC f',
         key_hl = 'Number',
-        action = 'lua print(2)'
+        action = 'Telescope find_files'
       },
       {
-        icon = ' ',
+        icon = ' ',
+        icon_hl = '@variable',
         desc = 'File Browser',
+        desc_hl = 'String',
         key = 'd',
         keymap = 'SPC d',
-        action = 'lua print(3)'
+        key_hl = 'Number',
+        action = 'NvimTreeToggle'
+      },
+      
+     {
+        icon = ' ',
+        icon_hl = '@variable',
+        desc = 'Next Tab',
+        desc_hl = 'String',
+        key = ' ',
+        keymap = 'SPC l',
+        key_hl = 'Number',
+        action = 'BufferLineCycleNext'
+      },
+      {
+        icon = ' ',
+        icon_hl = '@variable',
+        desc = 'Previous Tab',
+        desc_hl = 'String',
+        key = ' ',
+        keymap = 'SPC h',
+        key_hl = 'Number',
+        action = 'BufferLineCyclePrev'
+      },
+      {
+        icon = '󰗼 ',
+        icon_hl = '@variable',
+        desc = 'Kill Tab',
+        desc_hl = 'String',
+        key = ' ',
+        keymap = 'SPC q',
+        key_hl = 'Number',
+        action = 'BufferLineCycleNext'
+      },
+      {
+        icon = '󱃖 ',
+        icon_hl = '@variable',
+        desc = 'LSP Installer',
+        desc_hl = 'String',
+        key = 'm',
+        keymap = ':Mason',
+        key_hl = 'Number',
+        action = 'Mason'
+      },
+      {
+        icon = '󰚰 ',
+        icon_hl = '@variable',
+        desc = 'Update',
+        desc_hl = 'String',
+        key = 'u',
+        keymap = ':Lazy',
+        key_hl = 'Number',
+        action = 'Lazy'
       },
     },
-    footer = {}  
+    footer = {
+    [[]],
+    }  
   }
 })
 end

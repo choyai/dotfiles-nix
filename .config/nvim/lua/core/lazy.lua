@@ -36,6 +36,7 @@ local plugins = {
     "tpope/vim-fugitive", --Git command integration
     "ap/vim-css-color", --Color values visualized
     "olimorris/onedarkpro.nvim", --Dope ass colorscheme
+    {"catppuccin/nvim", name = "catppuccin"}, --Dope ass colorscheme
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}, --Parser for better highlighting, use :TSUpdate
     {"nvim-tree/nvim-tree.lua", dependencies = {"nvim-tree/nvim-web-devicons"} }, --File Browser, Devicons need a hack nerd font
     {"akinsho/bufferline.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} }, --Tabs
