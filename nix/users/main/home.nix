@@ -8,6 +8,7 @@ in
 {
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
+    nixpkgs.config.allowUnfree = true;
 
     # Home Manager needs a bit of information about you and the
     # paths it should manage.
@@ -26,12 +27,14 @@ in
     home.packages = with pkgs; [
         brave
         firefox
+        filezilla
         foot
         gimp
         grim
         libsForQt5.dolphin
         mpv
         neofetch
+        neovim
         obs-studio
         pavucontrol
         slurp
