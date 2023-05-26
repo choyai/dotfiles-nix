@@ -36,7 +36,7 @@ local plugins = {
     "tpope/vim-fugitive", --Git command integration
     "olimorris/onedarkpro.nvim", --Dope ass colorscheme
     "ap/vim-css-color", --Color values visualized
-    "nvim-treesitter/nvim-treesitter", --Parser for better highlighting, use :TSUpdate
+    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}, --Parser for better highlighting, use :TSUpdate
     {"nvim-tree/nvim-tree.lua", dependencies = {"nvim-tree/nvim-web-devicons"} }, --File Browser, Devicons need a hack nerd font
     {"akinsho/bufferline.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} }, --Tabs
     {"rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} }, --Debugger UI
@@ -56,6 +56,28 @@ local plugins = {
             require('Comment').setup()
         end
     },
+    {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v1.x',
+        dependencies = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {'williamboman/mason.nvim'},           -- Optional
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},         -- Required
+            {'hrsh7th/cmp-nvim-lsp'},     -- Required
+            {'hrsh7th/cmp-buffer'},       -- Optional
+            {'hrsh7th/cmp-path'},         -- Optional
+            {'saadparwaiz1/cmp_luasnip'}, -- Optional
+            {'hrsh7th/cmp-nvim-lua'},     -- Optional
+
+            -- Snippets
+            {'L3MON4D3/LuaSnip'},             -- Required
+            {'rafamadriz/friendly-snippets'}, -- Optional
+        }
+    }
 }
 
 local opts = {}
