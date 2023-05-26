@@ -8,7 +8,7 @@ if not vim.loop.fs_stat(lazypath) then
     "--branch=stable", -- latest stable release
     lazypath,
     print ([[
-Installing lazy and plugins.....
+Installing lazy.nvim and plugins.....
 ⠀⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝
 ⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇
 ⠀⠀⢀⢀⢄⢬⢪⡪⡎⣆⡈⠚⠜⠕⠇⠗⠝⢕⢯⢫⣞⣯⣿⣻⡽⣏⢗⣗⠏⠀
@@ -42,6 +42,7 @@ local plugins = {
     {"nvim-lualine/lualine.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} }, --Sexy bar at the bottom
     {"rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} }, --Debugger UI
     {"nvim-telescope/telescope.nvim", dependencies = {"nvim-lua/plenary.nvim"} }, --Plenary needs g++ and gcc
+    {"startup-nvim/startup.nvim", dependencies = {"nvim-telescope/telescope.nvim","nvim-lua/plenary.nvim"} },
     {
         "folke/which-key.nvim", event = "VeryLazy", --Shows key combinations 
         init = function()
