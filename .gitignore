@@ -2,7 +2,7 @@ plugin/
 /result
 
 lazy-lock.json
-/data/
+data/
 
 result/**
 
