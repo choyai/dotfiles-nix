@@ -34,13 +34,13 @@ local plugins = {
     "mfussenegger/nvim-dap", --Debugger
     "lewis6991/gitsigns.nvim", --Shows deletions/additions/modifications if in git repo
     "tpope/vim-fugitive", --Git command integration
-    "olimorris/onedarkpro.nvim", --Dope ass colorscheme
     "ap/vim-css-color", --Color values visualized
+    "olimorris/onedarkpro.nvim", --Dope ass colorscheme
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}, --Parser for better highlighting, use :TSUpdate
     {"nvim-tree/nvim-tree.lua", dependencies = {"nvim-tree/nvim-web-devicons"} }, --File Browser, Devicons need a hack nerd font
     {"akinsho/bufferline.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} }, --Tabs
-    {"rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} }, --Debugger UI
     {"nvim-lualine/lualine.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} }, --Sexy bar at the bottom
+    {"rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} }, --Debugger UI
     {"nvim-telescope/telescope.nvim", dependencies = {"nvim-lua/plenary.nvim"} }, --Plenary needs g++ and gcc
     {
         "folke/which-key.nvim", event = "VeryLazy", --Shows key combinations 
@@ -81,5 +81,4 @@ local plugins = {
 }
 
 local opts = {}
-
 require("lazy").setup(plugins, opts)
