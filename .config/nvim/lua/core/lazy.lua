@@ -42,7 +42,11 @@ local plugins = {
     {"nvim-lualine/lualine.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} }, --Sexy bar at the bottom
     {"rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} }, --Debugger UI
     {"nvim-telescope/telescope.nvim", dependencies = {"nvim-lua/plenary.nvim"} }, --Plenary needs g++ and gcc
-    {"startup-nvim/startup.nvim", dependencies = {"nvim-telescope/telescope.nvim","nvim-lua/plenary.nvim"} },
+    {
+      'glepnir/dashboard-nvim',
+      event = 'VimEnter',
+      dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
     {
         "folke/which-key.nvim", event = "VeryLazy", --Shows key combinations 
         init = function()
