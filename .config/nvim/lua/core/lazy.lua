@@ -31,17 +31,14 @@ local plugins = {
     "folke/lazy.nvim", --Lazy will manage itself
     "lukas-reineke/indent-blankline.nvim", --Sexy indent lines
     "windwp/nvim-ts-autotag", --Auto tags for HTML
-    "mfussenegger/nvim-dap", --Debugger
     "lewis6991/gitsigns.nvim", --Shows deletions/additions/modifications if in git repo
     "tpope/vim-fugitive", --Git command integration
     "ap/vim-css-color", --Color values visualized
     "olimorris/onedarkpro.nvim", --Dope ass colorscheme
-    {"catppuccin/nvim", name = "catppuccin"}, --Dope ass colorscheme
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}, --Parser for better highlighting, use :TSUpdate
     {"nvim-tree/nvim-tree.lua", dependencies = {"nvim-tree/nvim-web-devicons"} }, --File Browser, Devicons need a hack nerd font
     {"akinsho/bufferline.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} }, --Tabs
     {"nvim-lualine/lualine.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} }, --Sexy bar at the bottom
-    {"rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} }, --Debugger UI
     {"nvim-telescope/telescope.nvim", dependencies = {"nvim-lua/plenary.nvim"} }, --Plenary needs g++ and gcc
     {
       'glepnir/dashboard-nvim',

@@ -1,6 +1,6 @@
 vim.opt.clipboard = "unnamedplus"
 vim.opt.guicursor = ""
-vim.opt.mouse = "r"
+vim.opt.mouse = "a"
 vim.opt.smartcase = true
 vim.opt.smartindent = true
 vim.opt.number = true

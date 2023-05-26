@@ -53,10 +53,3 @@ map("n", "<C-A>l", ":BufferLineMoveNext<CR>", opts)
 
 map("n", "<leader>q", ":bdelete<CR>", opts) 
 
----------- Nvim Dap/DapUI -----------
-map("n", "<leader>mm", ":lua require'dap'.toggle_breakpoint()<CR>", opts) 
-map("n", "<leader>mh", ":lua require'dapui'.toggle()<CR>", opts) 
-map("n", "<leader>mj", ":lua require'dap'.continue()<CR>", opts) 
-map("n", "<leader>mk", ":lua require'dap'.step_into()<CR>", opts) 
-map("n", "<leader>ml", ":lua require'dap'.step_over()<CR>", opts) 
-
