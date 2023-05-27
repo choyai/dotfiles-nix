@@ -1,7 +1,7 @@
 My neovim config
 
 ![Imgur Image](https://imgur.com/Jy49zJT.png)
-
+![Imgur](https://imgur.com/YrT4gxf.png)
 Plugins:
 ```lua
 lazy.nvim -- Plugin Manager
