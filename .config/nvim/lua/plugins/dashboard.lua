@@ -73,37 +73,36 @@ plugin.setup({
         key_hl = 'Number',
         action = 'NvimTreeToggle'
       },
-      
-     {
-        icon = ' ',
-        icon_hl = '@variable',
-        desc = 'Next Tab',
-        desc_hl = 'String',
-        key = ' ',
-        keymap = 'SPC l',
-        key_hl = 'Number',
-        action = 'BufferLineCycleNext'
-      },
-      {
-        icon = ' ',
-        icon_hl = '@variable',
-        desc = 'Previous Tab',
-        desc_hl = 'String',
-        key = ' ',
-        keymap = 'SPC h',
-        key_hl = 'Number',
-        action = 'BufferLineCyclePrev'
-      },
-      {
-        icon = '󰗼 ',
-        icon_hl = '@variable',
-        desc = 'Kill Current Tab',
-        desc_hl = 'String',
-        key = ' ',
-        keymap = 'SPC q',
-        key_hl = 'Number',
-        action = 'BufferLineCycleNext'
-      },
+     -- {
+     --    icon = ' ',
+     --    icon_hl = '@variable',
+     --    desc = 'Next Tab',
+     --    desc_hl = 'String',
+     --    key = ' ',
+     --    keymap = 'SPC l',
+     --    key_hl = 'Number',
+     --    action = 'BufferLineCycleNext'
+     --  },
+     --  {
+     --    icon = ' ',
+     --    icon_hl = '@variable',
+     --    desc = 'Previous Tab',
+     --    desc_hl = 'String',
+     --    key = ' ',
+     --    keymap = 'SPC h',
+     --    key_hl = 'Number',
+     --    action = 'BufferLineCyclePrev'
+     --  },
+     --  {
+     --    icon = '󰗼 ',
+     --    icon_hl = '@variable',
+     --    desc = 'Kill Current Tab',
+     --    desc_hl = 'String',
+     --    key = ' ',
+     --    keymap = 'SPC q',
+     --    key_hl = 'Number',
+     --    action = 'BufferLineCycleNext'
+     --  },
       {
         icon = '󱃖 ',
         icon_hl = '@variable',
