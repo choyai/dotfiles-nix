@@ -38,6 +38,3 @@ plugin.setup{
 
 }
 end
-local bi = require'telescope.builtin'
-vim.keymap.set('n', '<leader>f', bi.find_files, {})
-vim.keymap.set('n', '<leader>gf', bi.git_files, {})
