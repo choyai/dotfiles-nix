@@ -20,14 +20,14 @@ telescope --Fuzzy Finder, instantly find a file
 dashboard.nvim --Dope Dashboard
 lsp-zero --Easy LSP support, Easy installation of LSP Servers from mason menu
 ```
-Colorschemes
+Colorschemes:
 ```lua
 onedarkpro
 dracula
 catppuccin
 ```
 
-Requirements
+Requirements:
 ```lua
 neovim 0.9 --Use appimage version if 0.9 isnt in your repositories
 gcc
@@ -38,3 +38,14 @@ wget
 unzip
 gzip
 ```
+
+Installation:
+First, just clone the repo
+```
+git clone https://github.com/justinlime/dotfiles
+```
+Then CD into the dotfiles/.config/nvim and run  
+```
+./install.sh
+```
+
