@@ -7,6 +7,7 @@ vim.api.nvim_set_hl(0, "TabLine", {bg = "none"})
 vim.opt.fillchars:append { eob = " " }
 
 local status, color = pcall(vim.cmd.colorscheme,"onedark_dark")
+-- local status, color = pcall(vim.cmd.colorscheme,"decay")
 if not status then
     print('Error with colorscheme: ', color)
     vim.cmd.colorscheme("murphy")
