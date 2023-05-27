@@ -7,5 +7,5 @@ plugin.setup({
         transparency=true
     }
 })
-vim.cmd.colorscheme("onedark")
+vim.cmd.colorscheme("onedark_dark")
 end
