@@ -35,6 +35,7 @@ local plugins = {
     "tpope/vim-fugitive", --Git command integration
     "ap/vim-css-color", --Color values visualized
     "olimorris/onedarkpro.nvim", --Dope ass colorscheme
+    {"folke/which-key.nvim", event = "VeryLazy"}, --Shows key combinations if youre dumb
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}, --Parser for better highlighting, use :TSUpdate
     {"nvim-tree/nvim-tree.lua", dependencies = {"nvim-tree/nvim-web-devicons"} }, --File Browser, Devicons need a hack nerd font
     {"akinsho/bufferline.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} }, --Tabs
@@ -46,21 +47,13 @@ local plugins = {
       dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
     {
-        "folke/which-key.nvim", event = "VeryLazy", --Shows key combinations 
-        init = function()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 300
-            require("which-key").setup()
-        end
-    },
-    {
         'numToStr/Comment.nvim', --Easy full line or selection commenting out
         config = function()
             require('Comment').setup()
         end
     },
     {
-        'VonHeikemen/lsp-zero.nvim',
+        'VonHeikemen/lsp-zero.nvim', --Temporary LSP Solution
         branch = 'v1.x',
         dependencies = {
             -- LSP Support
