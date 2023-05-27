@@ -36,12 +36,12 @@ local plugins = {
 
     "lukas-reineke/indent-blankline.nvim", --Sexy indent lines
     "windwp/nvim-ts-autotag", --Auto tags for HTML
-    "ap/vim-css-color", --Color values visualized
+    "norcalli/nvim-colorizer.lua", --Visualize Hex/RGB/etc 
     "lewis6991/gitsigns.nvim", --Shows deletions/additions/modifications if in git repo
     "tpope/vim-fugitive", --Git command integration
     "xiyaowong/transparent.nvim", --Transparency Toggle
-    "andweeb/presence.nvim",
-    "karb94/neoscroll.nvim",
+    "andweeb/presence.nvim", --Discord Rich Presence
+    "karb94/neoscroll.nvim", --Smooth scrolling
     "numToStr/Comment.nvim", --Easy full line or selection commenting out
     {"folke/which-key.nvim", event = "VeryLazy"}, --Shows key combinations if youre dumb
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}, --Parser for better highlighting, use :TSUpdate
@@ -50,7 +50,7 @@ local plugins = {
     {"nvim-lualine/lualine.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} }, --Sexy bar at the bottom
     {"nvim-telescope/telescope.nvim", dependencies = {"nvim-lua/plenary.nvim"} }, --Plenary needs g++ and gcc
     {
-      'glepnir/dashboard-nvim',
+      'glepnir/dashboard-nvim', --Dope Dashboard
       event = 'VimEnter',
       dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
