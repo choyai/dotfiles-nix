@@ -3,15 +3,24 @@ if not status then
     print('Error with plugin: ', plugin)
 else
 
+function edit_nvim()
+    vim.cmd(":e $MYVIMRC")
+    vim.cmd(":cd ~/.config/nvim")
+    vim.cmd(":NvimTreeOpen")
+end
+
 local randomquote = {
     "Bing Chilling",
     "https://justincode.us",
     "The Stink Boys",
-    "Yell Yell Yell Bitch Bitch Bitch",
     "Whopper Whopper Whopper Whopper Junior Double Triple Whopper",
     "White Monster",
     "The system plays us everday...",
     "sudo systemctl restart justinlime",
+    "sudo systemctl start justinlime",
+    "sudo systemctl stop justinlime",
+    "sudo systemctl enable justinlime",
+    "sudo systemctl disable justinlime",
 }
 
 plugin.setup({
@@ -115,6 +124,17 @@ plugin.setup({
         key_hl = 'Number',
         action = 'Lazy'
       },
+      {
+        icon = '󱓥 ',
+        icon_hl = '@variable',
+        desc = 'Edit Neovim',
+        desc_hl = 'String',
+        key = 'e',
+        keymap = ' ',
+        key_hl = 'Number',
+        action = 'lua edit_nvim()'
+      },
+
     },
     footer = {
         randomquote[math.random(1,#randomquote)] 
