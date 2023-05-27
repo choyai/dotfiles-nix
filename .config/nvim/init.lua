@@ -1,10 +1,10 @@
 --- Plugin Manager ---
 require ".lazy"
 
---- Core ---
+--- All Core Files ---
 vim.cmd('runtime! lua/core/*.lua')
 
---- Plugins ---
+--- All Plugins ---
 vim.cmd('runtime! lua/plugins/colorschemes/*.lua')
 vim.cmd('runtime! lua/plugins/*.lua')
 
