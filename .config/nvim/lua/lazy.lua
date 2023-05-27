@@ -35,7 +35,6 @@ local plugins = {
     "tpope/vim-fugitive", --Git command integration
     "ap/vim-css-color", --Color values visualized
     "olimorris/onedarkpro.nvim", --Dope ass colorscheme
-    "decaycs/decay.nvim",
     "Mofiqul/dracula.nvim",
     "xiyaowong/transparent.nvim",
     { "catppuccin/nvim", name = "catppuccin" },

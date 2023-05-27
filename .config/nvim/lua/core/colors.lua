@@ -1,4 +1,4 @@
-local status, color = pcall(vim.cmd.colorscheme,"onedark_dark")
+local status, color = pcall(vim.cmd.colorscheme,"catppuccin-mocha")
 if not status then
     print(color , 'using murphy instead')
     vim.cmd.colorscheme("murphy") 
