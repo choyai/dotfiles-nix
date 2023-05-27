@@ -1,6 +1,6 @@
 My neovim config
 
-![alt text](https://imgur.com/a/gTZWKOV)
+![Imgur Image](https://imgur.com/Jy49zJT.png)
 
 Plugins:
 ```lua
