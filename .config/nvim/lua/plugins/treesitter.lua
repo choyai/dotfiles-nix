@@ -30,7 +30,8 @@ plugin.setup {
       "ruby",
       "solidity",
       "sql",
-      "yaml"
+      "yaml",
+      "nix",
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
