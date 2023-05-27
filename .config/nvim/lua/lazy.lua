@@ -37,6 +37,7 @@ local plugins = {
     "olimorris/onedarkpro.nvim", --Dope ass colorscheme
     "Mofiqul/dracula.nvim",
     "xiyaowong/transparent.nvim",
+    "andweeb/presence.nvim",
     { "catppuccin/nvim", name = "catppuccin" },
     {"folke/which-key.nvim", event = "VeryLazy"}, --Shows key combinations if youre dumb
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}, --Parser for better highlighting, use :TSUpdate
