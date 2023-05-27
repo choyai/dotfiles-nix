@@ -3,6 +3,17 @@ if not status then
     print('Error with plugin: ', plugin)
 else
 
+local randomquote = {
+    "Bing Chilling",
+    "https://justincode.us",
+    "The Stink Boys",
+    "Yell Yell Yell Bitch Bitch Bitch",
+    "Whopper Whopper Whopper Whopper Junior Double Triple Whopper",
+    "White Monster",
+    "The system plays us everday...",
+    "sudo systemctl restart justinlime",
+}
+
 plugin.setup({
   theme = 'doom',
   config = {
@@ -106,7 +117,7 @@ plugin.setup({
       },
     },
     footer = {
-    [[]],
+        randomquote[math.random(1,#randomquote)] 
     }  
   }
 })
