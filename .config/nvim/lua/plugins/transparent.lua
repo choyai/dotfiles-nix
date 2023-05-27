@@ -11,9 +11,20 @@ plugin.setup({
   },
   extra_groups = {
     "NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
-    "NvimTreeNormal" -- NvimTree
+    "NvimTreeNormal", -- NvimTree
+    "NvimTreeNormalNC",
+    "NvimTreeWinSeparator",
+    "TelescopeNormal",
+    "TelescopeBorder",
+    "WhichKeyFloat",
   }, -- table: additional groups that should be cleared
   exclude_groups = {}, -- table: groups you don't want to clear
 })
+vim.g.transparent_groups = vim.list_extend(
+  vim.g.transparent_groups or {},
+  vim.tbl_map(function(v)
+    return v.hl_group
+  end, vim.tbl_values(require('bufferline.config').highlights))
+)
 vim.cmd(":TransparentEnable")
 end

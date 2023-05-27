@@ -126,7 +126,9 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'Z', api.node.run.system, opts('Run System'))
 
 end
+
 vim.api.nvim_set_hl(0, "NvimTreeNormal", {bg = "none"})
+
 plugin.setup({
     sort_by = "case_sensitive",
     on_attach = on_attach,

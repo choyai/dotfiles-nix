@@ -35,7 +35,10 @@ local plugins = {
     "tpope/vim-fugitive", --Git command integration
     "ap/vim-css-color", --Color values visualized
     "olimorris/onedarkpro.nvim", --Dope ass colorscheme
+    "decaycs/decay.nvim",
+    "Mofiqul/dracula.nvim",
     "xiyaowong/transparent.nvim",
+    { "catppuccin/nvim", name = "catppuccin" },
     {"folke/which-key.nvim", event = "VeryLazy"}, --Shows key combinations if youre dumb
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}, --Parser for better highlighting, use :TSUpdate
     {"nvim-tree/nvim-tree.lua", dependencies = {"nvim-tree/nvim-web-devicons"} }, --File Browser, Devicons need a hack nerd font
