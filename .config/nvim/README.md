@@ -1,5 +1,7 @@
 My neovim config
 
+![alt text](https://imgur.com/a/gTZWKOV)
+
 Plugins:
 ```lua
 lazy.nvim -- Plugin Manager
@@ -27,7 +29,7 @@ catppuccin
 
 Requirements
 ```lua
-neovim 0.9
+neovim 0.9 --Use appimage version if 0.9 isnt in your repositories
 gcc
 tar
 curl
