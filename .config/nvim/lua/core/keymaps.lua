@@ -30,6 +30,12 @@ map("v", "<S-l>", "> gv", opts)
 ---------- Nvim Tree ----------
 map("n", "<leader>d", ":NvimTreeToggle<CR>", opts)
 
+---------- Transparency ---------
+map("n", "<leader>t", ":TransparentToggle<CR>", opts)
+
+---------- Edit Nvim ------------
+map("n", "<leader>e", ":lua edit_nvim()<CR>", opts)
+
 ---------- Telescope ----------
 map('n', '<leader>f', ":Telescope find_files<CR>", opts)
 map('n', '<leader>gf', ":Telescope git_files<CR>",opts) 

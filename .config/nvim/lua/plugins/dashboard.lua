@@ -51,10 +51,10 @@ plugin.setup({
       {
         icon = ' ',
         icon_hl = '@variable',
-        desc = 'Transparency',
+        desc = 'Transparency Toggle',
         desc_hl = 'String',
         key = 't',
-        keymap = ':TransparentToggle',
+        keymap = 'SPC t',
         key_hl = 'Number',
         action = 'TransparentToggle'
       },
@@ -64,7 +64,7 @@ plugin.setup({
         desc = 'Edit Neovim',
         desc_hl = 'String',
         key = 'e',
-        keymap = ' ',
+        keymap = 'SPC e',
         key_hl = 'Number',
         action = 'lua edit_nvim()'
       },
