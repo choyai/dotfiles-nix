@@ -3,55 +3,10 @@ if not status then
     print('Error with plugin: ', plugin)
 else
 
-function edit_nvim()
-    vim.cmd(":e $MYVIMRC")
-    vim.cmd(":cd ~/.config/nvim")
-    vim.cmd(":NvimTreeOpen")
-end
-
-local randomquote = {
-    "Bing Chilling",
-    "https://justincode.us",
-    "The Stink Boys",
-    "Whopper Whopper Whopper Whopper Junior Double Triple Whopper",
-    "White Monster",
-    "The system plays us everday...",
-    "sudo systemctl restart justinlime",
-    "sudo systemctl start justinlime",
-    "sudo systemctl stop justinlime",
-    "sudo systemctl enable justinlime",
-    "sudo systemctl disable justinlime",
-}
-
 plugin.setup({
   theme = 'doom',
   config = {
-    header = {
-    [[  ⠀                                                 ]],
-    [[ ⠀⠀            ⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝        ]],
-    [[  ⠀           ⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇        ]],
-    [[ ⠀⠀            ⠀⢀⢀⢄⢬⢪⡪⡎⣆⡈⠚⠜⠕⠇⠗⠝⢕⢯⢫⣞⣯⣿⣻⡽⣏⢗⣗⠏        ⠀]],
-    [[ ⠀      ⠀      ⠪⡪⡪⣪⢪⢺⢸⢢⢓⢆⢤⢀⠀⠀⠀⠀⠈⢊⢞⡾⣿⡯⣏⢮⠷⠁⠀        ⠀ ]],
-    [[ ⠀         ⠀   ⠀⠀⠈⠊⠆⡃⠕⢕⢇⢇⢇⢇⢇⢏⢎⢎⢆⢄⠀⢑⣽⣿⢝⠲⠉⠀⠀⠀        ⠀]],
-    [[ ⠀          ⠀⠀⠀  ⠀⠀⡿⠂⠠⠀⡇⢇⠕⢈⣀⠀⠁⠡⠣⡣⡫⣂⣿⠯⢪⠰⠂⠀⠀⠀⠀        ]],
-    [[ ⠀⠀            ⠀⠀⠀⡦⡙⡂⢀⢤⢣⠣⡈⣾⡃⠠⠄⠀⡄⢱⣌⣶⢏⢊⠂⠀⠀⠀⠀⠀⠀        ]],
-    [[ ⠀  ⠀          ⠀⠀⠀⢝⡲⣜⡮⡏⢎⢌⢂⠙⠢⠐⢀⢘⢵⣽⣿⡿⠁⠁⠀⠀⠀⠀⠀⠀        ⠀]],
-    [[ ⠀   ⠀         ⠀⠀⠀⠨⣺⡺⡕⡕⡱⡑⡆⡕⡅⡕⡜⡼⢽⡻⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀        ]],
-    [[ ⠀   ⠀         ⠀⠀⠀⣼⣳⣫⣾⣵⣗⡵⡱⡡⢣⢑⢕⢜⢕⡝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀        ]],
-    [[ ⠀    ⠀        ⠀⠀⣴⣿⣾⣿⣿⣿⡿⡽⡑⢌⠪⡢⡣⣣⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀        ]],
-    [[ ⠀     ⠀       ⠀⠀⡟⡾⣿⢿⢿⢵⣽⣾⣼⣘⢸⢸⣞⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀        ]],
-    [[ ⠀    ⠀        ⠀⠀⠀⠁⠇⠡⠩⡫⢿⣝⡻⡮⣒⢽⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀        ]],
-    [[  ⠀    _   _                     _            ___     ]], 
-    [[  ⠀   | \ | |                   (_)          |__ \    ]],
-    [[  ⠀   |  \| |  ___   ___ __   __ _  _ __ ___    ) |   ]],
-    [[  ⠀   | . ` | / _ \ / _ \\ \ / /| || '_ ` _ \  / /    ]],
-    [[  ⠀   | |\  ||  __/| (_) |\ V / | || | | | | ||_|     ]],
-    [[  ⠀   |_| \_| \___| \___/  \_/  |_||_| |_| |_|(_)     ]],
-    [[  ⠀                                                   ]],
-    [[______________________________________________________]],
-    [[  ⠀                                                   ]],
-    [[  ⠀                                                   ]],
-    }, 
+    header = randomsplash(),
     center = {
       {
         icon = ' ',
@@ -73,36 +28,6 @@ plugin.setup({
         key_hl = 'Number',
         action = 'NvimTreeToggle'
       },
-     -- {
-     --    icon = ' ',
-     --    icon_hl = '@variable',
-     --    desc = 'Next Tab',
-     --    desc_hl = 'String',
-     --    key = ' ',
-     --    keymap = 'SPC l',
-     --    key_hl = 'Number',
-     --    action = 'BufferLineCycleNext'
-     --  },
-     --  {
-     --    icon = ' ',
-     --    icon_hl = '@variable',
-     --    desc = 'Previous Tab',
-     --    desc_hl = 'String',
-     --    key = ' ',
-     --    keymap = 'SPC h',
-     --    key_hl = 'Number',
-     --    action = 'BufferLineCyclePrev'
-     --  },
-     --  {
-     --    icon = '󰗼 ',
-     --    icon_hl = '@variable',
-     --    desc = 'Kill Current Tab',
-     --    desc_hl = 'String',
-     --    key = ' ',
-     --    keymap = 'SPC q',
-     --    key_hl = 'Number',
-     --    action = 'BufferLineCycleNext'
-     --  },
       {
         icon = '󱃖 ',
         icon_hl = '@variable',
@@ -124,6 +49,16 @@ plugin.setup({
         action = 'Lazy'
       },
       {
+        icon = ' ',
+        icon_hl = '@variable',
+        desc = 'Transparency',
+        desc_hl = 'String',
+        key = 't',
+        keymap = ':TransparentToggle',
+        key_hl = 'Number',
+        action = 'TransparentToggle'
+      },
+      {
         icon = '󱓥 ',
         icon_hl = '@variable',
         desc = 'Edit Neovim',
@@ -133,10 +68,10 @@ plugin.setup({
         key_hl = 'Number',
         action = 'lua edit_nvim()'
       },
-
+    
     },
     footer = {
-        randomquote[math.random(1,#randomquote)] 
+        randomquote()
     }  
   }
 })

@@ -26,5 +26,5 @@ vim.g.transparent_groups = vim.list_extend(
     return v.hl_group
   end, vim.tbl_values(require('bufferline.config').highlights))
 )
-vim.cmd(":TransparentEnable")
+
 end

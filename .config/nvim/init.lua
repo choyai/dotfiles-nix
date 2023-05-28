@@ -8,3 +8,4 @@ vim.cmd('runtime! lua/core/*.lua')
 vim.cmd('runtime! lua/plugins/colorschemes/*.lua')
 vim.cmd('runtime! lua/plugins/*.lua')
 
+

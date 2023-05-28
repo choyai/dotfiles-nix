@@ -32,7 +32,9 @@ local plugins = {
 
     "olimorris/onedarkpro.nvim",               --Dope ass colorscheme
     "Mofiqul/dracula.nvim",                    --
+    'folke/tokyonight.nvim',                   --
     { "catppuccin/nvim", name = "catppuccin" },--
+    { 'rose-pine/neovim', name = 'rose-pine' },--
 
     "lukas-reineke/indent-blankline.nvim", --Sexy indent lines
     "windwp/nvim-ts-autotag", --Auto tags for HTML
