@@ -33,6 +33,7 @@ local plugins = {
     "olimorris/onedarkpro.nvim",               --Dope ass colorscheme
     "Mofiqul/dracula.nvim",                    --
     'folke/tokyonight.nvim',                   --
+    "ellisonleao/gruvbox.nvim",
     { "catppuccin/nvim", name = "catppuccin" },--
     { 'rose-pine/neovim', name = 'rose-pine' },--
 

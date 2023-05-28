@@ -25,6 +25,9 @@ Colorschemes:
 onedarkpro
 dracula
 catppuccin
+rosepine
+toykonight
+gruvbox
 ```
 
 Requirements:
