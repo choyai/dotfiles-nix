@@ -30,13 +30,48 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     "folke/lazy.nvim", --Lazy will manage itself
 
-    "olimorris/onedarkpro.nvim",               --Dope ass colorscheme
-    "Mofiqul/dracula.nvim",                    --
-    'folke/tokyonight.nvim',                   --
+    --- Colorschemes ---
+    {
+    "hardhackerlabs/theme-vim",
+    name = "hardhacker",
+    lazy = false,
+    priority = 1000
+    },
+    {
+    "catppuccin/nvim", 
+    name = "catppuccin",
+    lazy = false,
+    priority = 1000
+    },
+    {
+    'rose-pine/neovim', 
+    name = 'rose-pine',
+    lazy = false,
+    priority = 1000
+    },
+    {
+    "olimorris/onedarkpro.nvim",
+    lazy = false,
+    priority = 1000
+    },
+    {
+    "Mofiqul/dracula.nvim",    
+    lazy = false,
+    priority = 1000
+    },
+    {
+    'folke/tokyonight.nvim',  
+    lazy = false,
+    priority = 1000
+    },
+    {
     "ellisonleao/gruvbox.nvim",
-    { "catppuccin/nvim", name = "catppuccin" },--
-    { 'rose-pine/neovim', name = 'rose-pine' },--
+    lazy = false,
+    priority = 1000
+    },
 
+    --- The Rest ----
+    'Bekaboo/dropbar.nvim',
     "lukas-reineke/indent-blankline.nvim", --Sexy indent lines
     "windwp/nvim-ts-autotag", --Auto tags for HTML
     "norcalli/nvim-colorizer.lua", --Visualize Hex/RGB/etc 
