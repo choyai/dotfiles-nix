@@ -71,7 +71,6 @@ local plugins = {
     },
 
     --- The Rest ----
-    'Bekaboo/dropbar.nvim',
     "lukas-reineke/indent-blankline.nvim", --Sexy indent lines
     "windwp/nvim-ts-autotag", --Auto tags for HTML
     "norcalli/nvim-colorizer.lua", --Visualize Hex/RGB/etc 
