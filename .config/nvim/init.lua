@@ -11,3 +11,6 @@ vim.cmd('runtime! lua/plugins/*.lua')
 --- Set Colorsheme ---
 require ".colors"
 
+-- Fix for weird bufferline looking weird on startup
+vim.cmd(":TransparentToggle")
+vim.cmd(":TransparentToggle")
