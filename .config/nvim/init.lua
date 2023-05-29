@@ -8,9 +8,6 @@ vim.cmd('runtime! lua/core/*.lua')
 vim.cmd('runtime! lua/plugins/colorschemes/*.lua')
 vim.cmd('runtime! lua/plugins/*.lua')
 
---- Set Colorsheme ---
-require ".colors"
-
 -- Fix for weird bufferline looking weird on startup
 vim.cmd(":TransparentToggle")
 vim.cmd(":TransparentToggle")
