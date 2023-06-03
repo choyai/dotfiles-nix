@@ -19,7 +19,7 @@ map("n", "<S-l>", ":vertical resize -2<CR>", opts)
 --Navigation
 map("i", "jj", "<ESC>", opts)
 
----------- Visual Mode ----------
+---------- Visual Mode -----------
 
 --Move Selections
 map("v", "<S-h>", "< gv", opts) 
@@ -27,20 +27,31 @@ map("v", "<S-j>", ":m '>+1<CR>gv=gv", opts)
 map("v", "<S-k>", ":m '<-2<CR>gv=gv", opts)
 map("v", "<S-l>", "> gv", opts)
 
----------- Nvim Tree ----------
-map("n", "<leader>d", ":NvimTreeToggle<CR>", opts)
+---------- Terminal Mode ----------
 
----------- Transparency ---------
-map("n", "<leader>t", ":TransparentToggle<CR>", opts)
+--Escape Terminal
+map('t', 'jj', [[<C-\><C-n>]], opts)
+map('t', '<C-[>', [[<C-\><C-n>]], opts)
+map('t', '<esc>', [[<C-\><C-n>]], opts)
 
----------- Edit Nvim ------------
-map("n", "<leader>e", ":lua edit_nvim()<CR>", opts)
+--------- Custom Functions ----------
 
----------- Telescope ----------
-map('n', '<leader>f', ":Telescope find_files<CR>", opts)
+--Edit Nvim 
+map("n", "<leader>en", ":lua edit_nvim()<CR>", opts)
+
+---------- Plugins ----------------
+
+--Nvim Tree 
+map("n", "<leader>td", ":NvimTreeToggle<CR>", opts)
+
+--Transparency
+map("n", "<leader>tt", ":TransparentToggle<CR>", opts)
+
+--Telescope 
+map('n', '<leader>ff', ":Telescope find_files<CR>", opts)
 map('n', '<leader>gf', ":Telescope git_files<CR>",opts) 
 
----------- BufferLine ----------
+--BufferLine 
 map("n", "<leader>1", ":BufferLineGoToBuffer 1<CR>", opts) 
 map("n", "<leader>2", ":BufferLineGoToBuffer 2<CR>", opts) 
 map("n", "<leader>3", ":BufferLineGoToBuffer 3<CR>", opts) 
@@ -57,5 +68,5 @@ map("n", "<leader>l", ":BufferLineCycleNext<CR>", opts)
 map("n", "<C-A>h", ":BufferLineMovePrev<CR>", opts) 
 map("n", "<C-A>l", ":BufferLineMoveNext<CR>", opts) 
 
-map("n", "<leader>q", ":bdelete<CR>", opts) 
+map("n", "<leader>qq", ":bdelete<CR>", opts) 
 

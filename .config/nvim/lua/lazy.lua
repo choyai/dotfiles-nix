@@ -78,8 +78,8 @@ local plugins = {
     "tpope/vim-fugitive", --Git command integration
     "xiyaowong/transparent.nvim", --Transparency Toggle
     "andweeb/presence.nvim", --Discord Rich Presence
-    "karb94/neoscroll.nvim", --Smooth scrolling
     "numToStr/Comment.nvim", --Easy full line or selection commenting out
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
     {"folke/which-key.nvim", event = "VeryLazy"}, --Shows key combinations if youre dumb
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}, --Parser for better highlighting, use :TSUpdate
     {"nvim-tree/nvim-tree.lua", dependencies = {"nvim-tree/nvim-web-devicons"} }, --File Browser, Devicons need a hack nerd font

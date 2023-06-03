@@ -14,7 +14,7 @@ plugin.setup({
         desc = 'Find File           ',
         desc_hl = 'String',
         key = 'f',
-        keymap = 'SPC f',
+        keymap = 'SPC ff',
         key_hl = 'Number',
         action = 'Telescope find_files'
       },
@@ -24,7 +24,7 @@ plugin.setup({
         desc = 'File Browser',
         desc_hl = 'String',
         key = 'd',
-        keymap = 'SPC d',
+        keymap = 'SPC td',
         key_hl = 'Number',
         action = 'NvimTreeToggle'
       },
@@ -54,7 +54,7 @@ plugin.setup({
         desc = 'Transparency Toggle',
         desc_hl = 'String',
         key = 't',
-        keymap = 'SPC t',
+        keymap = 'SPC tt',
         key_hl = 'Number',
         action = 'TransparentToggle'
       },
@@ -64,9 +64,9 @@ plugin.setup({
         desc = 'Edit Neovim',
         desc_hl = 'String',
         key = 'e',
-        keymap = 'SPC e',
+        keymap = 'SPC en',
         key_hl = 'Number',
-        action = 'lua edit_nvim()'
+        action = 'lua edit_nvim()' -- Declared in functions.lua
       },
     
     },
