@@ -28,47 +28,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+    --- Lazy ---
     "folke/lazy.nvim", --Lazy will manage itself
 
     --- Colorschemes ---
-    {
-    "hardhackerlabs/theme-vim",
-    name = "hardhacker",
-    lazy = false,
-    priority = 1000
-    },
-    {
-    "catppuccin/nvim", 
-    name = "catppuccin",
-    lazy = false,
-    priority = 1000
-    },
-    {
-    'rose-pine/neovim', 
-    name = 'rose-pine',
-    lazy = false,
-    priority = 1000
-    },
-    {
-    "olimorris/onedarkpro.nvim",
-    lazy = false,
-    priority = 1000
-    },
-    {
-    "Mofiqul/dracula.nvim",    
-    lazy = false,
-    priority = 1000
-    },
-    {
-    'folke/tokyonight.nvim',  
-    lazy = false,
-    priority = 1000
-    },
-    {
-    "ellisonleao/gruvbox.nvim",
-    lazy = false,
-    priority = 1000
-    },
+    {"hardhackerlabs/theme-vim",name = "hardhacker",lazy = false,priority = 1000},
+    {"catppuccin/nvim", name = "catppuccin",lazy = false,priority = 1000},
+    {'rose-pine/neovim',name = 'rose-pine',lazy = false,priority = 1000},
+    {"olimorris/onedarkpro.nvim",lazy = false,priority = 1000},
+    {"Mofiqul/dracula.nvim",lazy = false,priority = 1000},
+    {'folke/tokyonight.nvim',lazy = false,priority = 1000},
+    {"ellisonleao/gruvbox.nvim",lazy = false,priority = 1000},
 
     --- The Rest ----
     "lukas-reineke/indent-blankline.nvim", --Sexy indent lines
@@ -86,11 +56,7 @@ local plugins = {
     {"akinsho/bufferline.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} }, --Tabs
     {"nvim-lualine/lualine.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} }, --Sexy bar at the bottom
     {"nvim-telescope/telescope.nvim", dependencies = {"nvim-lua/plenary.nvim"} }, --Plenary needs g++ and gcc
-    {
-      'glepnir/dashboard-nvim', --Dope Dashboard
-      event = 'VimEnter',
-      dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
+    {'glepnir/dashboard-nvim', event = 'VimEnter',dependencies = { 'nvim-tree/nvim-web-devicons' } }, --Dope ass dashboard
     {
         'VonHeikemen/lsp-zero.nvim', --Temporary LSP Solution
         branch = 'v1.x',
@@ -112,7 +78,7 @@ local plugins = {
             {'L3MON4D3/LuaSnip'},             -- Required
             {'rafamadriz/friendly-snippets'}, -- Optional
         }
-    }
+    },
 }
 
 local opts = {}
