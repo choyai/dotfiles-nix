@@ -26,4 +26,9 @@ vim.g.transparent_groups = vim.list_extend(
     return v.hl_group
   end, vim.tbl_values(require('bufferline.config').highlights))
 )
+
+--- Fix for bufferline looking strange on startup ---
+vim.cmd(":TransparentToggle")
+vim.cmd(":TransparentToggle")
+
 end

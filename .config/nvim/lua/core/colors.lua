@@ -1,10 +1,10 @@
-local status, color = pcall(vim.cmd.colorscheme,"hardhacker")
+local status, color = pcall(vim.cmd.colorscheme,"catppuccin-mocha")
 if not status then
     print(color , 'using murphy instead')
     vim.cmd.colorscheme("murphy") 
 end
 
-vim.opt.fillchars:append { eob = " " } -- Gets rid of tilde after line number
+vim.opt.fillchars:append { eob = " " } -- Gets rid of tilde after line numbers
 
 ---------- These are now handled by the transparent nvim plugin --------
 -- vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
