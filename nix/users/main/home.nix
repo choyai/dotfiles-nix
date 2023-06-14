@@ -3,7 +3,7 @@ let
     font = "JetBrainsMono Nerd Font";
     accent = "bd93f9";
     background = "11111B";
-    username = "justinlime1999";
+    username = "choyai";
 in
 {
     # Let Home Manager install and manage itself.

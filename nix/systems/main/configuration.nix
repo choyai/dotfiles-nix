@@ -26,17 +26,17 @@
     nixpkgs.config.allowUnfree = true;
 
     #Set your time zone.
-    time.timeZone = "America/Chicago";
+    time.timeZone = "Asia/Bangkok";
 
     users = {
         defaultUserShell = pkgs.zsh;
         groups = {
-            justinlime1999 = {};
+            choyai = {};
         };
-        users.justinlime1999 = {
+        users.choyai = {
             isNormalUser = true;
             initialPassword = "gigachad";
-            extraGroups = [ "wheel" "video" "libvirtd" "justinlime1999" ];
+            extraGroups = [ "wheel" "video" "libvirtd" "choyai" ];
             packages = with pkgs; [
             ];
         };
@@ -49,6 +49,6 @@
     # Before changing this value read the documentation for this option
     # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
 
-    system.stateVersion = "22.11"; # Did you read the comment?
+    system.stateVersion = "23.05"; # Did you read the comment?
 }
 
